@@ -650,21 +650,21 @@ global.dfail = (type, m, conn) => {
   let msg = {
     owner: 'Khusus owner',
     mods: 'Perintah ini hanya dapat digunakan oleh _*Moderator*_ !',
-    premium: 'Khusus premium',
+    premium: 'Klo Ngga Premium Gosah Bnyk Tingkah',
     group: 'Perintah ini hanya dapat digunakan di grup!',
     private: 'Perintah ini hanya dapat digunakan di Chat Pribadi!',
-    admin: 'Khusus Admin group',
-    nsfw: 'Perintah ini hanya bisa diaktifkan oleh owner',
+    admin: 'Khusus Admin group Goblok',
+    nsfw: 'Perintah ini hanya bisa diaktifkan oleh owner Ya Ngtd Jngn Sange',
   }[type]
   if (msg) return conn.sendButton(m.chat, msg, watermark, 'OK', 'Nanii', m)
   let botAdmin = {
-    botAdmin: 'Mikir dkit lah bang *BOT NYA BUKAN ADMIN*',
+    botAdmin: 'Mikir dkit lah Ngtd *BOT NYA BUKAN ADMIN*',
   }[type]
   if (botAdmin) return conn.sendButton(m.chat, botAdmin, 'Lupa Saya', 'Eh iya ya', 'Nanii', m)
   let unreg = {
     unreg: `Silahkan daftar untuk menggunakan fitur ini dengan cara mengetik:\n\n*#daftar nama.umur*\n\nContoh: *#daftar LynXzy.16*`
   }[type]
-  if (unreg) return conn.sendButton(m.chat, `Halo kak ${name} Sebelum menggunakan fitur ini Harap Verify Terlebih dahulu`, watermark, 'Verify', `#daftar ${name}.17`, { key: { fromMe: false, remoteJid: 'status@broadcast', participant: '0@s.whatsapp.net' }, message: { orderMessage: { message: `©shirobotz_\nJam ${time}`, itemCount: 2022, thumbnail: fs.readFileSync('./src/RadBotZ.jpg')}}})
+  if (unreg) return conn.sendButton(m.chat, `Halo kak ${name} Sebelum menggunakan fitur ini Harap Verify Terlebih dahulu`, watermark, 'Verify', `#daftar ${name}.17`, { key: { fromMe: false, remoteJid: 'status@broadcast', participant: '0@s.whatsapp.net' }, message: { orderMessage: { message: `©Raffi Botz_\nJam ${time}`, itemCount: 2022, thumbnail: fs.readFileSync('./src/RadBotZ.jpg')}}})
 }
 
 let chalk = require('chalk')
