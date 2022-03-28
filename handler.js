@@ -253,11 +253,11 @@ module.exports = {
           sDemote: '',
           descUpdate: true,
           delete: true,
-          stiker: false,
+          stiker: true,
           rpg: true,
           nsfw: false,
           antiBadword: true,
-          antiLink: false,
+          antiLink: true,
           viewonce: true,
         }
         
@@ -279,7 +279,7 @@ module.exports = {
           anticall: true,
           antispam: true,
           antitroli: false,
-          backup: false,
+          backup: true,
           backupDB: 0,
           groupOnly: false,
           jadibot: false,
@@ -437,7 +437,7 @@ module.exports = {
           if (xp > 200) m.reply('Ngecit -_-') // Hehehe
           else m.exp += xp
           if (!isPrems && plugin.limit && global.db.data.users[m.sender].limit < plugin.limit * 1) {
-            this.reply(m.chat, `Limit anda habis, silahkan beli melalui *${usedPrefix}buy*`, m)
+            this.reply(m.chat, `Limit anda habis ya kontol, silahkan beli melalui *${usedPrefix}buy*`, m)
             continue // Limit habis
           }
           if (plugin.level > _user.level) {
@@ -609,7 +609,7 @@ vcard: `BEGIN:VCARD\nVERSION:3.0\nN:;WA;;;\nFN:WA\nTEL;type=CELL;type=VOICE;waid
     let chat = global.db.data.chats[m.key.remoteJid]
     if (chat.delete) {
     await this.sendButton(m.key.remoteJid, `*—「 Anti Delete 」—*
-*📢 Terdeteksi Penghapusan Pesan !*
+*📢 Si Kontol Terdeteksi Penghapusan Pesan !*
 *◇ Nama :* @${m.participant.split`@`[0]}
 *◇ Type*: ${Object.keys(m.message.message)[0]}
 *◇ Number*: ${require('awesome-phonenumber')(`+${m.participant.split`@`[0]}`).getNumber('international')}
@@ -649,8 +649,8 @@ global.dfail = (type, m, conn) => {
   if (owr) return conn.sendSticker(m.chat, 'https://telegra.ph/file/2848948d64ea43302c882.png', m ,{sendEphemeral: true})
   let msg = {
     owner: 'Khusus owner',
-    mods: 'Perintah ini hanya dapat digunakan oleh _*Moderator*_ !',
-    premium: 'Klo Ngga Premium Gosah Bnyk Tingkah',
+    mods: 'Perintah ini hanya dapat digunakan oleh _*Rafi Ganz*_ !',
+    premium: 'Klo Ngga Premium Gosah Bnyk Tingkah Goblok',
     group: 'Perintah ini hanya dapat digunakan di grup!',
     private: 'Perintah ini hanya dapat digunakan di Chat Pribadi!',
     admin: 'Khusus Admin group Goblok',
@@ -658,13 +658,13 @@ global.dfail = (type, m, conn) => {
   }[type]
   if (msg) return conn.sendButton(m.chat, msg, watermark, 'OK', 'Nanii', m)
   let botAdmin = {
-    botAdmin: 'Mikir dkit lah Ngtd *BOT NYA BUKAN ADMIN*',
+    botAdmin: 'Mikir dkit lah Ngtd *BOT NYA BUKAN ADMIN Goblok*',
   }[type]
   if (botAdmin) return conn.sendButton(m.chat, botAdmin, 'Lupa Saya', 'Eh iya ya', 'Nanii', m)
   let unreg = {
-    unreg: `Silahkan daftar untuk menggunakan fitur ini dengan cara mengetik:\n\n*#daftar nama.umur*\n\nContoh: *#daftar LynXzy.16*`
+    unreg: `Silahkan daftar untuk menggunakan fitur ini dengan cara mengetik:\n\n*#daftar nama.umur*\n\nContoh: *#daftar Raffi.17*`
   }[type]
-  if (unreg) return conn.sendButton(m.chat, `Halo kak ${name} Sebelum menggunakan fitur ini Harap Verify Terlebih dahulu`, watermark, 'Verify', `#daftar ${name}.17`, { key: { fromMe: false, remoteJid: 'status@broadcast', participant: '0@s.whatsapp.net' }, message: { orderMessage: { message: `©Raffi Botz_\nJam ${time}`, itemCount: 2022, thumbnail: fs.readFileSync('./src/RadBotZ.jpg')}}})
+  if (unreg) return conn.sendButton(m.chat, `Halo kak ${name} Sebelum menggunakan fitur ini Harap Verify Terlebih dahulu Ya`, watermark, 'Verify', `#daftar ${name}.17`, { key: { fromMe: false, remoteJid: 'status@broadcast', participant: '0@s.whatsapp.net' }, message: { orderMessage: { message: `©Raffi Botz_\nJam ${time}`, itemCount: 2022, thumbnail: fs.readFileSync('./src/RadBotZ.jpg')}}})
 }
 
 let chalk = require('chalk')
