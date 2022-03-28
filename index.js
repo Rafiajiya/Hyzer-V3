@@ -9,7 +9,7 @@ CFonts.say('Rpg\nWhatsApp Bot', {
   align: 'center',
   gradient: ['red', 'magenta']
 })
-CFonts.say(`'${package.name}' By @${package.author.name || package.author}\nMikeBot ver 1.5.0\nRecode By Dawnfrost`, {
+CFonts.say(`'${package.name}' By @${package.author.name || package.author}\nRafiBot ver 1.5.0\nRecode By Rafi Aji`, {
   font: 'console',
   align: 'center',
   gradient: ['red', 'magenta']
