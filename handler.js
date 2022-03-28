@@ -253,7 +253,7 @@ module.exports = {
           sDemote: '',
           descUpdate: true,
           delete: true,
-          stiker: true,
+          stiker: false,
           rpg: true,
           nsfw: false,
           antiBadword: true,
